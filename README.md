@@ -11,6 +11,5 @@ described in the paper:
 Ge Nong, Sen Zhang and Wai Hong Chan
 Two Efficient Algorithms for Linear Suffix Array Construction
 2008
-http://www.cs.sysu.edu.cn/nong/index.files/Two%20Efficient%20Algorithms%20for%20Linear%20Suffix%20Array%20Construction.pdf
 
 Yuta Mori `<yuta dot 256 at gmail dot com>`
