@@ -1,48 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DA126245-858B-4084-AB86-54FE1E10772E}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworks>net20;net40;net45;net462;netstandard1.5;netstandard1.6;netstandard2.0</TargetFrameworks>
     <RootNamespace>SAIS</RootNamespace>
     <AssemblyName>SAIS</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>SAIS-CSharp</PackageId>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <Description>An implementation of the induced sorting algorithm written in C#</Description>
+    <Product>SAIS-CSharp</Product>
+    <Authors>Yuta Mori</Authors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RepositoryUrl>https://github.com/PNNL-Comp-Mass-Spec/SAIS-CSharp</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageLicenseUrl>https://github.com/PNNL-Comp-Mass-Spec/SAIS-CSharp/blob/master/COPYING</PackageLicenseUrl>
+    <PackageProjectUrl>https://sites.google.com/site/yuta256/sais</PackageProjectUrl>
+    <Copyright>Copyright (c) 2010 Yuta Mori. All Rights Reserved.</Copyright>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\SAIS.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\SAIS.xml</DocumentationFile>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Compile Include="SAIS.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Remove="Examples\**" />
+    <EmbeddedResource Remove="Examples\**" />
+    <None Remove="Examples\**" />
+    <None Remove=".gitignore" />
+    <None Remove="is_orig.c" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
