@@ -1,0 +1,22 @@
+version: 1.0.0.{build}
+image: Visual Studio 2017
+configuration: Release
+platform: Any CPU
+build:
+  project: SAIS-CSharp.sln
+  verbosity: minimal
+test: off
+artifacts:
+- path: bin\Release\SAIS-CSharp*.nupkg
+deploy:
+- provider: NuGet
+  api_key:
+    secure: K/JOcKhtKsDzJTZm384EnU3rqil/gUr7BqLfdQiZiRLDA76hMtgNAQ8//ZAku3sd
+  skip_symbols: true
+notifications:
+- provider: Email
+  to:
+  - bryson.gibbons@pnnl.gov
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: true
