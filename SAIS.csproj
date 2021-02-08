@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net20;net40;net45;net462;netstandard1.5;netstandard1.6;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net20;net40;net45;net462;net472;netstandard2.0;netstandard2.1;net5.0</TargetFrameworks>
     <RootNamespace>SAIS</RootNamespace>
     <AssemblyName>SAIS</AssemblyName>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>SAIS-CSharp</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <FileVersion>$(Version)</FileVersion>
     <Description>An implementation of the induced sorting algorithm written in C#</Description>
@@ -15,12 +15,14 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RepositoryUrl>https://github.com/PNNL-Comp-Mass-Spec/SAIS-CSharp</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <PackageLicenseUrl>https://github.com/PNNL-Comp-Mass-Spec/SAIS-CSharp/blob/master/COPYING</PackageLicenseUrl>
+    <!-- Could also potentially use <PackageLicenseExpression>MIT</PackageLicenseExpression>, since it is identical (only difference is "All rights reserved") -->
+    <PackageLicenseFile>COPYING</PackageLicenseFile>
     <PackageProjectUrl>https://sites.google.com/site/yuta256/sais</PackageProjectUrl>
     <Copyright>Copyright (c) 2010 Yuta Mori. All Rights Reserved.</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="COPYING" Pack="true" PackagePath="" />
     <Compile Remove="Examples\**" />
     <EmbeddedResource Remove="Examples\**" />
     <None Remove="Examples\**" />
