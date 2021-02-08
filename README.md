@@ -4,7 +4,8 @@ SAIS-CSharp
 
 [![Build status](https://ci.appveyor.com/api/projects/status/t80ddu8se6kam6kg?svg=true)](https://ci.appveyor.com/project/PNNLCompMassSpec/sais-csharp)
 
-This repo contains the code from the SAIS-CSharp archive download, available at https://sites.google.com/site/yuta256/sais. See that page for more information.
+This repo contains the code from the SAIS-CSharp archive download, available at https://sites.google.com/site/yuta256/sais \
+See that page for more information on the Suffix Array, Induced Sorting (SAIS) library.
 
 This repo contains the C# source code of an implementation of
 the IS based linear suffix array construction algorithm
